@@ -2,6 +2,7 @@
 layout: post
 title: "Action tasks in action"
 description: Control Locus Map over any other application may be useful, let's try it.
+comments: true
 tags: 
  - locus-map
  - intent
@@ -17,11 +18,11 @@ There are solutions. One of the best is to use [Presets](https://docs.locusmap.e
 
 In 2018, we have introduced a very interesting concept of controlling Locus Map over Broadcast intents, we internally call it `Action tasks`. Its possibilities are documented in our [Locus API repository](https://github.com/asamm/locus-api/wiki/Action-tasks-(Broadcasts)), but let's try to use it practically for example for our task above.
 
-Among Locus Map application, you will also need a tool that is able to send configured intents to any other application. Tasker or MacroDroid are good examples. Anyway use may use this system also from own Android application.
+Among Locus Map application, you will also need a tool that is able to send configured intents to any other application. Tasker or MacroDroid are good examples. Anyway you may use this system also from own Android application.
 
 ## Main posibilities
 
-* control map, like zooming, centering, directly move with map
+* control map like zooming, centering, directly move with map
 * control Track recording system
 * control Live tracking
 * enable certain Preset
@@ -41,7 +42,6 @@ Among Locus Map application, you will also need a tool that is able to send conf
 * we are in our new task
 
 ## 3a. Define Locus action (the hard way)
-
 * `+` to add new action, filter `intent` and select `Send intent`
 
 ![img]({{ '/assets/images/post_action_tasks_01.png' | relative_url }}){: .center-image }
@@ -71,7 +71,16 @@ Addon completely generates complicated JSON text we had to define before, nice r
 
 Now it is completely on you, how you execute the defined task.
 
-## 5. Explanation of `extra tag`
+<hr />
+
+## Explanation of `extra tag
+
+In section 3a. we defined `extra` tag for Tasker. What are parameters in this special definition?
+
+  * `Action` is constant that will be handled by Locus Map itself (only)
+  * `Extra`: define task itself "Biking"`
+    * `preset` as identification of "work with Presets". Mode precisely `start`s preset named `Bike`.
+    * `track_record` as identification of "work with track recording system".  Mode precisely `start` track-recording with profile names `Biking`.
 
 {% highlight java %}
 { 
@@ -86,8 +95,4 @@ Now it is completely on you, how you execute the defined task.
 }
 {% endhighlight %}
 
-  * `Action` is constant that will be handled by Locus Map itself (only)
-  * `Extra`: define task itself "Biking" } }`
-    * `preset` as identification of "work with Presets". Mode precisely `start`s preset named `Bike`.
-    * `track_record` as identification of "work with track recording system".  Mode precisely `start` track-recording with profile names `Biking`.
   * `Package`: reguired identification of target application (restrictions since Android 8.0

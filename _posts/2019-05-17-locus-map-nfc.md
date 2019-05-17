@@ -2,6 +2,7 @@
 layout: post
 title: "Control of Locus Map over NFC"
 description: Interested in quick control of Locus Map application over NFC tags? You're on the correct place.
+comments: true
 tags: 
  - locus-map
  - nfc
