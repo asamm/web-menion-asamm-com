@@ -1,6 +1,6 @@
 # Jekyll configuration
 
-name: Menion online
+name: Menion's night life
 description: Software Developer & LoMan in one person.
 
 # Url is currently only used only for the RSS feed in feed.xml
@@ -12,7 +12,7 @@ url: https://menion.asamm.com
 baseurl: ''
 
 author: Jiří M. aka Menion
-copyright: 2019-2019
+copyright: 2019
 
 share:
   facebook: false
