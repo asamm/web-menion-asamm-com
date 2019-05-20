@@ -20,7 +20,13 @@ What?
 
 # NFC support
 
-We may use alternative approach. Tasker application allows us to create and control Locus Map over so called `Action tasks` as I described in the [previous post]({{ site.baseurl }}{% post_url 2019-05-17-action-tasks %}). What if we should start certain task over NFC tag?
+We may use alternative approach. Tasker application allows us to create and control Locus Map over so called `Action tasks` as I described in the [previous post]({{ site.baseurl }}{% post_url 2019-05-20-action-tasks-tasker %}). What if we should start certain task over NFC tag?
+
+I'll try to describe two application we already wrote about, that may help us with this task. [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm) and [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid).
+
+If I may suggest, my personal experience: Tasker is more powerful, but lot more complext. I personally prefer MacroDroid which has UI closer to what my head is able to consume <i class="far fa-smile"></i>.
+
+# Over Tasker
 
 ## 1. Preparation
 
@@ -43,3 +49,17 @@ We may use alternative approach. Tasker application allows us to create and cont
 * `Tasker` now offer available tasks, so choose your Start bike ride
 
 And we are done!
+
+# Over MacroDroid
+
+And what about MacroDroid you may ask? Similar system exists here as well. Setup of basics of MacroDroid was also descrined in [previous post]({{ site.baseurl }}{% post_url 2019-05-20-action-tasks-macrodroid %}). Post ended with suggestion to specify custom trigger. And this is what we need to do here.
+
+* long click on your macro > `Edit`
+* tap on **Empty trigger** > `Delete`
+* tap on `+` in Triggers > `Device Events` > `NFC Tag` > `Write New Tag`
+
+![img]({{ '/assets/images/post_nfc_03.png' | relative_url }}){: .center-image }
+
+And we are done. Enjoy your next trip!
+
+
